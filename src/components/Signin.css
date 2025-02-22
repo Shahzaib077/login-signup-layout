@@ -1,0 +1,120 @@
+.sign-in{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 210px;
+}
+
+.side-img{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.side-img img{
+    width: 714px;
+    height: 400px;
+}
+
+form h1{
+    font-size: 38px;
+    font-weight: bold;
+    color: rgb(106,109,141);
+    margin-bottom: 20px;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    width: 714px;
+    height: 192.35px;
+    gap: 20px;
+}
+
+.fields input{
+    padding: 20px 13px;
+    background: transparent;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 10px;
+
+}
+
+.fields input::placeholder{
+    color:rgb(119, 119, 119) ;
+}
+
+.form-content{
+    width: 714px;
+    height: 400px;
+    z-index: 3;
+}
+
+.forget-pass{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 14px;
+}
+
+.forget-pass p a{
+    color: rgb(227,138,229);
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.login-btn button{
+    background: linear-gradient(rgb(172, 244, 222), rgb(123, 144, 247));
+    width: 100%;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.no-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.no-account p{
+    font-size: 13px;
+    color: rgb(144,146,170);
+}
+
+.no-account p a{
+    color: rgb(227,138,229);
+
+}
+
+@media screen and (max-width: 915px){
+    .side-img img{
+        width: 450px;
+        height: 260px;
+    }
+
+    form h1{
+        font-size: 20px;
+
+    }
+
+    .fields input{
+        padding: 13px 7px;
+    }
+
+    .login-btn button{
+        padding: 13px 8px;
+    }
+
+}
