@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 8%;
+    margin-bottom: 2%;
+    overflow-x: hidden;
 }
 
 .register-side-img{
@@ -10,19 +12,17 @@
     justify-content: right;
     align-items: center;
     width: 40%;
-    height: 50vh;
 }
 
 .register-side-img img{
-    width: 650px;
-    height: 360px;
+    width: 714px;
+    height: 400px;
 }
 
 form h1{
     font-size: 38px;
     font-weight: bold;
     color: rgb(106,109,141);
-    margin-bottom: 20px;
 }
 
 .register-fields{
@@ -55,10 +55,9 @@ form h1{
 }
 
 .register-form-content{
-    width: 30%;
-    height: 70vh;
+    width: 40%;
     margin-bottom: 20px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .register-btn{
@@ -96,3 +95,134 @@ form h1{
     color: rgb(227,138,229);
 
 }
+
+/* Responsiveness */
+@media screen and (max-width: 1236px){
+
+    .register{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 6%;
+    }
+    .register-side-img img{
+        width: 670px;
+        height: 360px;
+    }
+
+    .register-side-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form h1{
+        font-size: 19px;
+        margin-bottom: -4px;
+    }
+
+    .register-fields input{
+        padding: 13px 7px;
+    }
+
+    .register-btn a button{
+        padding: 13px 8px;
+    }
+
+    .register-form-content{
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .register-side-img img{
+        width: 460px;
+        height: 260px;
+    }
+    .register{
+        margin-top: -2%;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    .register-side-img img{
+        width: 410px;
+        height: 250px;
+    }
+
+    .form h1{
+        font-size: 19px;
+    }
+
+    .register-btn button{
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .register-btn{
+        margin-top: 2px;
+    }
+
+    .register-fields input::placeholder{
+        font-size: 11px;
+    }
+
+    .register-form-content{
+        width: 50%;
+    }
+    .checkBox p{
+        font-size: 12px;
+    }
+
+    .already-account{
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 545px){
+    .register-side-img img{
+        width: 350px;
+        height: 220px;
+    }
+    .register-form-content{
+        width: 80%;
+    }
+
+    .register{
+        margin-top: 3%;
+    }
+
+    .register-fields input{
+        padding: 5px 5px;
+    }
+
+    .register-btn button{ 
+        padding: 8px 5px;
+    }
+
+    .register-fields input::placeholder{
+        font-size: 10px;
+    }
+
+    .checkBox p{
+        font-size: 10px;
+    }
+
+    .register-fields{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .already-account p{
+        font-size: 11px;
+    }
+    
+    .already-account p a{
+        color: rgb(227,138,229);
+    
+    }
+}
+

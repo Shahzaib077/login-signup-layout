@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import sideImg from "../assets/images/sideImg.png";
 import Navbar from "./Navbar";
 import "./Signup.css";
@@ -48,7 +49,7 @@ const Register = () => {
 
             <div className="already-account">
               <p>
-                Already Have An Account ? <a>Login</a>
+                Already Have An Account ? <Link to={'/'}> <a>Login</a> </Link>
               </p>
             </div>
           </form>

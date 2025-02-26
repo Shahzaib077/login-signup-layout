@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ForgetPass from './components/ForgetPass.jsx'
+import ProfileDetails from './components/ProfileDetails.jsx'
 import Register from './components/Register.jsx'
 import Signin from './components/Signin.jsx'
 import './index.css'
@@ -10,7 +11,7 @@ import Affiliate from './pages/Affiliate.jsx'
 import Home from './pages/Home.jsx'
 import Staking from './pages/Staking.jsx'
 
-const allRoutes = createBrowserRouter(
+export const allRoutes = createBrowserRouter(
   [
     {
       path:'/',
@@ -39,6 +40,10 @@ const allRoutes = createBrowserRouter(
     {
       path:'/forget-pass',
       element: <ForgetPass/>
+    },
+    {
+      path:'/profile-details',
+      element: <ProfileDetails/>
     }
   ]
 )

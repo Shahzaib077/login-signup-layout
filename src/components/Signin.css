@@ -2,17 +2,18 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    margin-top: 210px;
+    margin-top: 7%;
 }
 
 .side-img{
     display: flex;
     justify-content: right;
     align-items: center;
+    width: 40%;
 }
 
 .side-img img{
-    width: 714px;
+    width: 690px;
     height: 400px;
 }
 
@@ -20,14 +21,12 @@ form h1{
     font-size: 38px;
     font-weight: bold;
     color: rgb(106,109,141);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .fields{
     display: flex;
     flex-direction: column;
-    width: 714px;
-    height: 192.35px;
     gap: 20px;
 }
 
@@ -44,8 +43,7 @@ form h1{
 }
 
 .form-content{
-    width: 714px;
-    height: 400px;
+    width: 40%;
     z-index: 3;
 }
 
@@ -54,6 +52,7 @@ form h1{
     align-items: center;
     justify-content: right;
     margin-right: 14px;
+    margin-top: 4px;
 }
 
 .forget-pass p a{
@@ -62,16 +61,18 @@ form h1{
     font-size: 13px;
 }
 
-.login-btn{
+.login-btn a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 5px;
+    width: 100%;
+
 }
 
-.login-btn button{
+.login-btn a button{
     background: linear-gradient(rgb(172, 244, 222), rgb(123, 144, 247));
-    width: 100%;
+    color: white;
     padding: 20px 20px;
     border: none;
     border-radius: 10px;
@@ -98,23 +99,158 @@ form h1{
 
 }
 
-@media screen and (max-width: 915px){
+@media screen and (max-width: 1236px){
+
+    .sign-in{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .side-img img{
-        width: 450px;
-        height: 260px;
+        width: 400px;
+        height: 200px;
+    }
+
+    .side-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     form h1{
-        font-size: 20px;
-
+        font-size: 19px;
+        margin-bottom: -4px;
     }
 
     .fields input{
         padding: 13px 7px;
     }
 
-    .login-btn button{
+    .login-btn a button{
         padding: 13px 8px;
     }
 
+    .sign-in{
+        margin-top: 0%;
+    }
+
+    .login-btn a{
+        margin-top: -10px;
+    }
+
+    .form-content{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .side-img img{
+        width: 300px;
+        height: 180px;
+    }
+    .sign-in{
+        margin-top: -2%;
+    }
+    .forget-pass p a{
+        font-size: 10px;
+    }
+    .forget-pass{
+        margin-top: -4px;
+    }
+
+    .no-account{
+        margin-top: -3px;
+    }
+
+    .no-account p{
+        font-size: 12px;
+    }
+
+    .form-content{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .side-img img{
+        width: 350px;
+        height: 200px;
+    }
+    .sign-in{
+        margin-top: -6%;
+    }
+    
+}
+
+
+@media screen and (max-width: 700px){
+    .side-img img{
+        width: 410px;
+        height: 250px;
+    }
+
+    .form h1{
+        font-size: 19px;
+    }
+
+    .login-btn a button{
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .login-btn a{
+        margin-top: -12px;
+    }
+
+    .fields input::placeholder{
+        font-size: 11px;
+    }
+
+    .forget-pass{
+        margin-top: -10px;
+    }
+
+    .forget-pass p a{
+        font-size: 10px;
+    }
+    .form-content{
+        width: 63%;
+    }
+
+}
+
+@media screen and (max-width: 545px){
+    .side-img img{
+        width: 410px;
+        height: 250px;
+    }
+
+    .form h1{
+        font-size: 19px;
+    }
+
+    .login-btn a button{
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .login-btn a{
+        margin-top: -12px;
+    }
+
+    .fields input::placeholder{
+        font-size: 11px;
+    }
+
+    .forget-pass{
+        margin-top: -10px;
+    }
+
+    .forget-pass p a{
+        font-size: 10px;
+    }
+    .form-content{
+        width: 70%;
+    }
 }

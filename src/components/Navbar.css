@@ -1,117 +1,334 @@
-.navbar{
-    display: flex; 
-    align-items: center;
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
     justify-content: space-around;
-    height: 100px;
-    z-index: 3;
-}
-
-.left-items{
-    display: flex;
-    justify-content: center; 
     align-items: center;
-}
-
-.left-items ul{
+    padding: 17px 20px;
+    background: transparent;
+    position: relative;
+  }
+  
+  .left-items {
     display: flex;
-    justify-content: left;
     align-items: center;
-    gap: 19px;
-    width: 326px;
-    height: 20px;
-}
+    gap: 60px;
+  }
 
-.left-items li{
+  .logo{
+    width: 160px;
+  }
+  
+  .logo img {
+    width: 210px;
+    height: 40;
+    margin-top: 18px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .nav-links li {
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0%;
-    list-style: none;
-    color: rgb(101,141,167);
-}
+    color: rgb(101, 141, 167);
+    cursor: pointer;
+  }
+  
+  .nav-links li:hover {
+    color: rgb(0, 110, 210);
+  }
 
-.logo{
-
-    width: 252px;
-    height: 48px;
-}
-
-.logo img{
-    width: 252px;
-    height: 48px;
-}
-
-.btns{
+  .btns{
+    width: 300px;
+  }
+  
+  .btns p{
     display: flex;
-    gap: 35px;
-    width: 337px;
-    height: 33px;
-}
-
-.btns select{
-
-    padding: 1px 3px;
-    background-color: rgb(106,111,142);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .btns p select{
+    padding: 7px;
+    border-radius: 20px;
+    background-color: rgb(106, 111, 142);
     color: white;
-    border-radius: 20px;
-    text-align: center;
     cursor: pointer;
-    font-size: 12px;
-}
-
-.btns button{
-    padding: 5px 13px;
+  }
+  
+  .signup-btn {
+    padding: 8px 12px;
+    border: 1px solid rgba(172, 244, 222, 0.89);
     border-radius: 20px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 12px;
-
-}
-
-.signup-btn{
-
-    color: rgb(123,144,247);
-    font-weight:500;
+    color: rgb(123, 144, 247);
     background: transparent;
-    border: 1px solid rgba(172, 244, 222, 0.89) ;
-    box-shadow: 0px 0px 3px rgba(172, 244, 222, 0.89);
-}
-
-.signin-btn{    
-    font-weight:500;
+    cursor: pointer;
+  }
+  
+  .signin-btn {
+    padding: 8px 12px;
     border: none;
-    background: linear-gradient(rgb(172,244,222),rgb(123,144,247));
-}
-
-.active{
-    font-weight:500;
+    border-radius: 20px;
+    background: linear-gradient(rgb(172, 244, 222), rgb(123, 144, 247));
+    cursor: pointer;
+  }
+  
+  .hamBtn {
+    display: none;
+    background: black;
+    color: white;
     border: none;
-    background: linear-gradient(rgb(172,244,222),rgb(123,144,247));
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .hamBurger {
+    font-size: 1.5rem;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(rgb(92, 209, 255), rgb(179, 59, 179));
+    box-shadow: 4px 13px 13px 8px rgb(134, 221, 255) ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: left 0.3s ease;
+    z-index: 7;
+    overflow-y: scroll;
+  }
+
+  /* Target the scrollbar */
+  .mobile-menu::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px; 
 }
 
-@media screen and (max-width: 915px){
-
-
-    .btns button{
-        padding: 2px 7px;
-    }
-
-    .btns{
-        gap: 10px;
-    }
-
-    .btns select{
-        padding: 2px 2px;
-
-    }
-    .left-items li{
-        font-size: 10px;
-    }
-
-    .logo img{
-        width: 148px;
-        height: 34px;
-        
-    }
-    
+/* Target the scrollbar track */
+.mobile-menu::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
 }
+
+/* Target the scrollbar thumb */
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+
+/*Change the thumb color on hover */
+.mobile-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+  
+  .mobile-menu.active{
+    left: 0;
+  }
+  
+  .mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .mobile-menu ul a{
+    color: rgb(83, 83, 83);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 1px 4px 4px rgb(179, 59, 179);
+    background: transparent;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .mobile-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mobile-btns a button{
+    /* width: 90px; */
+    color: white;
+    font-size: 12px;
+  }
+  
+  .mobile-menu select {
+    padding: 7px;
+    width: 60px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(80, 80, 80);
+    color: rgb(223, 223, 223);
+  }
+
+  .mobile-signup-btn{
+    padding: 8px 12px;
+    border: 1px solid rgba(172, 244, 222, 0.89);
+    border-radius: 20px;
+    color: rgb(123, 144, 247);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-signin-btn{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(rgb(172, 244, 222), rgb(123, 144, 247));
+    cursor: pointer;
+  }
+
+  .mobile-leftLayout{
+    background: rgba(165, 165, 165, 0.274);
+    border-radius: 15px;
+    padding: 0px 10px;
+  }
+
+  .mobile-part1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 10px;
+  }
+
+  .mobile-part1 button{
+    text-align: left;
+    padding: 8px 7px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0px 5px 2px rgb(179, 59, 179);
+    display: flex;
+    gap: 5px;
+    color: #363636;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    /* width: 140px; */
+  }
+
+  .mobile-part1 button:hover{
+    background-color: #c5cdff;
+    transform: translateY(2px);
+  }
+
+  .mobile-part2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .mobile-content{
+   
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 10px;
+      border-radius: 10px;
+      background: linear-gradient(to bottom right,#72b4ff, #dbdbdb);
+      width: 180px;
+  }
+
+  .mobile-content p{
+    font-size: 12px;
+  }
+
+  .mobile-searchField{
+    display: flex;
+    gap: 5px;
+  }
+
+  .mobile-searchField input{
+    width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: 1px 2px 2px gray;
+  }
+
+  .mobile-searchBtn{
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 1px 2px 2px gray;
+    padding: 0px 3px;
+  }
+
+  .mobile-logoutBtn{
+    width: 180px;
+    padding: 12px 10px;
+      border: none;
+      border-radius: 10px;
+      color: black;
+      background: linear-gradient(#95c0f2, #9f83fb);
+      box-shadow: 0px 5px 2px #aeb4d8;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      font-weight: bold;
+  }
+  
+  .mobile-logoutBtn:hover{
+      transform: translateY(2px);
+      color: rgb(46, 46, 46);
+  
+  }
+
+  
+  @media (max-width: 890px) {
+    .nav-links,
+    .btns {
+      display: none;
+    }
+  
+    .hamBtn {
+      display: block;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 890px) {
+    .hamBtn{
+      display: none;
+    }
+
+    .mobile-menu{
+      display: none;
+    }
+  }
+
+  

@@ -6,6 +6,7 @@
     font-family: "Bai Jamjuree", serif;
 }
 
+
 body::before{
     content: "";
     background-image: url("./assets/images/bg.png");
@@ -13,9 +14,74 @@ body::before{
     background-position: center center;
     background-size: cover;
     position: absolute;
-    top: 20%;
-    left: 40%;
-    width: 500px;
-    height: 500px;
-    z-index: 2;
+    top: 12%;
+    left: 35%;
+    width: 530px;
+    height: 530px;
+}
+
+@media screen and (max-width: 1236px){
+    body::before{
+        content: "";
+        position: absolute;
+        top: 7%;
+        left: 22%;
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    body::before{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body::before{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        width: 430px;
+        height: 430px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    body::before{
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 8%;
+        width: 380px;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    body::before{
+        content: "";
+        position: absolute;
+        top: 35%;
+        left: 8%;
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 250px){
+    body::before{
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 3%;
+        width: 290px;
+        height: 290px;
+    }
 }
